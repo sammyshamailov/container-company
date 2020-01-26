@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 import { AppMaterialModule } from '../app-mateiral/app-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OnlyDigitDirective } from './directives/only-digit.directive';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    OnlyDigitDirective
+  ],
   imports: [
     CommonModule,
     AppMaterialModule,
@@ -18,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppMaterialModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OnlyDigitDirective
   ]
 })
 export class SharedModule { }

@@ -1,26 +1,32 @@
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
 import { HomePageComponent } from './core/components/home-page/home-page.component';
-import { SharedModule } from './shared/shared.module';
 import { SearchResultsComponent } from './core/components/search-results/search-results.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { NavBarComponent } from './core/components/nav-bar/nav-bar.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     CoreModule,
-    SharedModule
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  schemas: [
+    NO_ERRORS_SCHEMA
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

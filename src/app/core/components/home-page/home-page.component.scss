@@ -88,16 +88,6 @@ $yellow: #FEDF47;
     
 }
 
-.blue-border {
-    position: relative;
-    top: 102px;
-    left: 914px;
-    width: 93px;
-    height: 0px;
-    border: 2px solid $light-blue;
-    opacity: 1;
-}
-
 .secondary-text {
     position: relative;
     top: 122px;
@@ -109,6 +99,16 @@ $yellow: #FEDF47;
     letter-spacing: 0;
     color: $dark-blue;
     text-shadow: 0px 3px 6px #000000;
+    opacity: 1;
+}
+
+.blue-border {
+    position: relative;
+    top: 102px;
+    left: 914px;
+    width: 93px;
+    height: 0px;
+    border: 2px solid $light-blue;
     opacity: 1;
 }
 

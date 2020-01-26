@@ -18,6 +18,11 @@ export class SearchResultsComponent implements OnInit {
     this.apiService.requestPhoneAlert(containerID, phoneNumber);
   }
 
+  convertToDate(time: number) {
+    const d = new Date(time);
+    return d.toLocaleDateString();
+  }
+
   ngOnInit() {
     this.containerInfo$ = this.apiService.containerStatusResponse$;
   }

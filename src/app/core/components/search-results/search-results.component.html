@@ -28,7 +28,7 @@
             <span matSuffix>:מסוכן</span>
         </mat-form-field>
         <mat-form-field appearance="none">
-            <input matInput readonly value={{containerInfo.data.dueDate}}>
+            <input matInput readonly value="{{convertToDate(containerInfo.data.dueDate)}}">
             <span matSuffix>:צפויה להגיע למסוף אשדוד/חיפה</span>
         </mat-form-field>
         <mat-form-field appearance="none">
@@ -39,7 +39,7 @@
     <div class="last-form-column">
         <span class="text">אני מעוניין לקבל מסרון לנייד כאשר המכולה מגיעה</span>
         <mat-form-field appearance="none">
-            <input #phoneNumber matInput placeholder="מספר נייד">
+            <input #phoneNumber appDigitOnly matInput placeholder="מספר נייד">
         </mat-form-field>
         <button mat-raised-button (click)="requestPhoneAlert(containerInfo.data.containerID, phoneNumber.value); phoneNumber.value='';">שלח</button>
     </div>
