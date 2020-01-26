@@ -1,0 +1,45 @@
+<div class="home-page-container">
+    <form [formGroup]='searchForm'>
+        <mat-form-field class="search-by-permission" appearance="normal">
+            <button mat-raised-button>
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <input readonly matInput formControlName='permissionNumber'>
+            <span matSuffix>חיפוש מספר התרה</span>
+        </mat-form-field>
+
+        <mat-form-field class="search-by-transaction" appearance="normal">
+            <button mat-raised-button>
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <input readonly matInput formControlName='transactionID'>
+            <span matSuffix>חיפוש מזהה עסקה</span>
+        </mat-form-field>
+
+        <mat-form-field class="search-by-container" appearance="normal">
+            <button (click)="onSubmit()" [disabled]="containerNumber.invalid" class="search-button" mat-raised-button>
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <input matInput placeholder="קוד באורך 6 תווים" formControlName='containerNumber'>
+            <span matSuffix>מספר מכולה</span>
+        </mat-form-field>
+    </form>
+    <div><app-search-results></app-search-results></div>
+    <div class="main-text">
+        <span>ברוכים הבאים</span>
+        <span class="text">לחברה פיקטיבית</span>
+    </div>
+    <div class="blue-border"></div>
+    <div class="secondary-text">
+        טקסט על התמונות סליידר כאופציה
+        טקסט על התמונות סליידר כאופציה
+        טקסט על התמונות סליידר כאופציה
+        טקסט על התמונות סליידר כאופציה
+        טקסט על התמונות סליידר כאופציה
+        טקסט על התמונות סליידר כאופציה
+        טקסט על התמונות סליידר כאופציה
+    </div>
+    <button class="yellow-arrow" mat-icon-button>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+</div>

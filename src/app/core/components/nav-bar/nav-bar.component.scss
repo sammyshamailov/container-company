@@ -1,0 +1,117 @@
+$dark-blue: #001348;
+$white: #FFFFFF;
+$yellow: #FEDF47;
+
+.container-photo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 681px;
+  background: transparent url('/assets/Mask Group 1.png') 100% 100% no-repeat padding-box;
+  opacity: 1;
+  z-index: -1;
+}
+
+.shadow-photo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 463px;
+  background: transparent url('/assets/Rectangle 125.svg') 0% 0% no-repeat padding-box;
+  opacity: 1;
+  z-index: -1;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 115px;
+  height: 36px;
+  left: 0px;
+  width: 455px;
+  text-align: center;
+  font: Bold 24px/32px 'Assistant';
+  letter-spacing: 0;
+  text-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  z-index: 1;
+
+  a {
+    color: $white;
+  }
+
+  a:hover {
+    opacity: 0.8;
+    border-bottom: 6px solid white;
+  }
+}
+
+.home-link {
+  @extend .nav-bar;
+  left: 1376px;
+  width: 116px;
+}
+
+.about-link {
+  @extend .nav-bar;
+  left: 1205px;
+  width: 70px;
+
+  div {
+    top: 253px;
+    left: -50px;
+    width: 174px;
+    height: 185px;
+    background: $dark-blue 0% 0% no-repeat padding-box;
+    box-shadow: 0px 9px 13px #00000069;
+    color: black;
+
+    a:hover {
+      opacity: 1;
+      background-color: $yellow;
+      
+      span {
+        color: black;
+      }
+    }
+  }
+}
+
+.contact-link {
+  @extend .nav-bar;
+  left: 428px;
+  width: 120px;
+}
+
+.news-link {
+  @extend .nav-bar;
+  left: 628px;
+  width: 67px;
+}
+
+.activity-link {
+  @extend .nav-bar;
+  left: 960px;
+  width: 138px;
+}
+
+.terminal-link {
+  @extend .nav-bar;
+  left: 800px;
+  width: 70px;
+}
+
+.active-link {
+  border-bottom: 6px solid white;
+}
+
+.border {
+  position: absolute;
+  top: 268px;
+  left: 405px;
+  width: 1113px;
+  height: 0px;
+  border: 2px solid #FFFFFF;
+  opacity: 1;
+}

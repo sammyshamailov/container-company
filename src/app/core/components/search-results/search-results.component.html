@@ -1,0 +1,47 @@
+<ng-container *ngIf="(containerInfo$ | async) as containerInfo">
+<form class="results-form">
+    <div class="first-form-column">
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.containerID}}>
+            <span matSuffix>:מכולה מספר</span>
+        </mat-form-field>
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.size}}>
+            <span matSuffix>:גודל</span>
+        </mat-form-field>
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.type}}>
+            <span matSuffix>:סוג</span>
+        </mat-form-field>
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.manifest}}>
+            <span matSuffix>:מצהר</span>
+        </mat-form-field>
+    </div>
+    <div class="second-form-column">
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.treatment}}>
+            <span matSuffix>:סוג טיפול</span>
+        </mat-form-field>
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.dangerous}}>
+            <span matSuffix>:מסוכן</span>
+        </mat-form-field>
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.dueDate}}>
+            <span matSuffix>:צפויה להגיע למסוף אשדוד/חיפה</span>
+        </mat-form-field>
+        <mat-form-field appearance="none">
+            <input matInput readonly value={{containerInfo.data.customsStatus}}>
+            <span matSuffix>:סטאטוס מכס</span>
+        </mat-form-field>
+    </div>
+    <div class="last-form-column">
+        <span class="text">אני מעוניין לקבל מסרון לנייד כאשר המכולה מגיעה</span>
+        <mat-form-field appearance="none">
+            <input #phoneNumber matInput placeholder="מספר נייד">
+        </mat-form-field>
+        <button mat-raised-button (click)="requestPhoneAlert(containerInfo.data.containerID, phoneNumber.value); phoneNumber.value='';">שלח</button>
+    </div>
+</form>
+</ng-container>

@@ -1,0 +1,122 @@
+$light-blue: #00D3FF;
+$dark-blue: #001348;
+$yellow: #FEDF47;
+
+.home-page-container {
+    position: absolute;
+    top: 648px;
+    left: 0px;
+    width: 870px;
+}
+
+.general-container {
+    position: absolute;
+    width: 290px;
+    height: 67px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    box-shadow: 2px 2px 13px #00000066;
+    text-align: center;
+    opacity: 1;
+    border-radius: 3px;
+    z-index: 1;
+
+    input {
+        left: 75px;
+        width: 215px;
+        text-align: right;
+    }
+
+    button {
+        position: absolute;
+        left: 0px;
+        width: 75px;
+        height: 67px;
+        top: -14px;
+        background: #00D3FF 0% 0% no-repeat padding-box;
+        opacity: 1;
+    }
+
+    span {
+        color: $dark-blue;
+        font-weight: bold;
+        padding: 5px;
+    }
+}
+
+.general-container:hover {
+    background: $dark-blue 0% 0% no-repeat padding-box;
+
+    input, span {
+        color: white;
+    }
+}
+
+.search-by-container {
+    @extend .general-container;
+    left: 1134px;
+}
+
+.search-by-transaction {
+    @extend .general-container;
+    left: 816px;
+}
+
+.search-by-permission {
+    @extend .general-container;
+    left: 497px;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 92px;
+    left: 743px;
+    width: 435px;
+    height: 103px;
+    text-align: center;
+    letter-spacing: 0.71px;
+    color: $dark-blue;
+    text-shadow: 0px 3px 6px #000000;
+    opacity: 1;
+
+    .text {
+        font-weight: 800;
+        font-size: 55px;
+        font-family: 'Assitant', 'sans-serif';
+    }
+    
+}
+
+.blue-border {
+    position: relative;
+    top: 102px;
+    left: 914px;
+    width: 93px;
+    height: 0px;
+    border: 2px solid $light-blue;
+    opacity: 1;
+}
+
+.secondary-text {
+    position: relative;
+    top: 122px;
+    left: 554px;
+    width: 812px;
+    height: 86px;
+    text-align: center;
+    font: 700 16px/22px;
+    letter-spacing: 0;
+    color: $dark-blue;
+    text-shadow: 0px 3px 6px #000000;
+    opacity: 1;
+}
+
+.yellow-arrow {
+    position: relative;
+    top: 102px;
+    left: 946px;
+    width: 29px;
+    height: 15px;
+    color: $yellow;
+}

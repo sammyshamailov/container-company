@@ -1,0 +1,46 @@
+<div class="container-photo">
+    <div class="shadow-photo"></div>
+</div>
+<div class="border"></div>
+<div class="nav-bar">
+    <mdb-navbar SideClass=" navbar-expand navbar-dark transparent lighten-1" [containerInside]="false">
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item contact-link">
+                    <a class="waves-light" mdbWavesEffect>יצירת קשר</a>
+                </li>
+                <li class="nav-item news-link">
+                    <a class="waves-light" mdbWavesEffect>חדשות</a>
+                </li>
+                <li class="nav-item terminal-link">
+                    <a class="waves-light" mdbWavesEffect>מסופים</a>
+                </li>
+                <li class="nav-item activity-link">
+                    <a class="waves-light" mdbWavesEffect>תחומי פעילות</a>
+                </li>
+                <li class="nav-item dropdown about-link" dropdown>
+                    <a dropdownToggle mdbWavesEffect type="button" class="waves-light dark-blue">
+                        אודות<span class="caret"></span></a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary text-center" role="menu">
+                        <a class="dropdown-item waves-light white-text font-weight-bold" mdbWavesEffect><span>פרופיל
+                                החברה</span></a>
+                        <a class="dropdown-item waves-light white-text font-weight-bold" mdbWavesEffect><span>הנהלה
+                                וצוות
+                                החברה</span>
+                        </a>
+                        <a class="dropdown-item waves-light white-text font-weight-bold" mdbWavesEffect><span>קוד
+                                אתי</span></a>
+                        <a class="dropdown-item waves-light white-text font-weight-bold" mdbWavesEffect><span>אישורים
+                                ואבטחת
+                                איכות</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item home-link">
+                    <a class="waves-light" mdbWavesEffect routerLink='/home' routerLinkActive='active-link'
+                        [routerLinkActiveOptions]='{exact: true}'>עמוד הבית</a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+</div>
