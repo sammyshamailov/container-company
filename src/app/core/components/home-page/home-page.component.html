@@ -1,7 +1,7 @@
 <div class="home-page-container">
     <form [formGroup]='searchForm'>
         <mat-form-field class="search-by-permission" appearance="normal">
-            <button mat-icon-button>
+            <button mat-raised-button>
                 <mat-icon>arrow_back</mat-icon>
             </button>
             <input readonly matInput formControlName='permissionNumber'>
@@ -9,7 +9,7 @@
         </mat-form-field>
 
         <mat-form-field class="search-by-transaction" appearance="normal">
-            <button mat-icon-button>
+            <button mat-raised-button>
                 <mat-icon>arrow_back</mat-icon>
             </button>
             <input readonly matInput formControlName='transactionID'>
@@ -17,7 +17,7 @@
         </mat-form-field>
 
         <mat-form-field class="search-by-container" appearance="normal">
-            <button (click)="onSubmit()" [disabled]="containerNumber.invalid" class="search-button" mat-icon-button>
+            <button (click)="onSubmit()" [disabled]="containerNumber.invalid" class="search-button" mat-raised-button>
                 <mat-icon>arrow_back</mat-icon>
             </button>
             <input matInput placeholder="קוד באורך 6 תווים" formControlName='containerNumber'>
